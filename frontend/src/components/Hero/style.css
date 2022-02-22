@@ -1,0 +1,59 @@
+.hero {
+    /* Height set in js document */
+    width: 100vw;
+    margin: 0%;
+    padding: 0%;
+    background-image: repeating-linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.0392156862745098) 0px,
+            rgba(255, 255, 255, 0.0392156862745098) 2px,
+            transparent 2px,
+            transparent 4px
+        ),
+        linear-gradient(0deg, rgb(30, 35, 121), rgb(45, 106, 187));
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    background-image: url('./svg/wavesTop.svg');
+    background-position: top;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    line-height: 0;
+    width: 100%;
+}
+
+.hero::after {
+    content: '';
+    background-image: url('./svg/wavesBot.svg');
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    line-height: 0;
+    width: 100%;
+    background-position: bottom;
+    transform: rotate(180deg);
+}
+
+.herocontainer {
+    height: calc(100% - 100px);
+    width: 100%;
+    position: relative;
+    /* Flex Settings */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.herocontainer img {
+    backdrop-filter: blur(0.01rem);
+    background-color:rgba(255,255,255,0.05);
+    border-radius: 2rem;
+    border-style: solid;
+    border-color:rgba(255, 255, 255, 0.2);
+    border-width: 1px 0 0 1px;
+    margin-bottom: 1rem;
+}

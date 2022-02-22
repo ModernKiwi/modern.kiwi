@@ -1,0 +1,47 @@
+{
+  "name": "modern.kiwi",
+  "version": "0.0.1",
+  "description": "Website for my awesome projects",
+  "author": "Alvin Fletcher",
+  "keywords": [],
+  "homepage": "https://github.com/ModernKiwi/WebServer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ModernKiwi/WebServer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ModernKiwi/WebServer/issues"
+  },
+  "main": "server/server.js",
+  "type": "module",
+  "engines": {
+    "node": "17"
+  },
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}
